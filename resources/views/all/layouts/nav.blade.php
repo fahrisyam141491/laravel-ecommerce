@@ -1,7 +1,7 @@
 <style>
     .nav{
-        position: relative;
-        top: 10px;
+        /* position: sticky; */
+        /* top: 10px; */
         width: 100%;
         height: 7vh;
         display: flex;

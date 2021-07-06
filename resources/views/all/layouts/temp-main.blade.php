@@ -26,11 +26,46 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('adminlte3') }}/plugins/summernote/summernote-bs4.min.css">
 </head>
+<style>
+.container{
+  position: relative;
+  background: #343A40;
+}
+.container .sosmed{
+  width: 100%;
+  height: 3vh;
+  margin-bottom: 10px;
+  background: #b9b8b8;
+}
+.container .main-nav{
+  position: sticky;
+  top: 0;
+  background: yellow;
+  width: 100%;
+  height: 7vh;
+  z-index: 1;
+}
+.container .main-content{
+  /* margin-top: 70px; */
+}
+.container .sosmed a{
+  color: black;
+}
+</style>
 <body>
     <div class="container">
-        @include('layouts.nav')
-        @yield('content')
-    </div>
+      <div class="sosmed">
+            <a href="/seller-tab" class="float float-right mr-4"><h6>Seller Tab</h6></a>
+            <a href="/" class="float float-right mr-4"><h6>Home</h6></a>
+          </div>
+          <div class="main-nav">
+            @include('all.layouts.nav')
+          </div>
+          <div class="main-content">
+            @yield('content')
+          </div>
+          
+      </div>
 </body>
 
 <!-- jQuery -->
